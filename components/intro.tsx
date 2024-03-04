@@ -7,10 +7,13 @@ import Link from 'next/link';
 import { BsLinkedin } from "react-icons/bs";
 import { LiaDownloadSolid, LiaArrowRightSolid } from "react-icons/lia";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
+    const ref = useSectionInView("Home", 0.5);
+    
     return (
-        <section id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
+        <motion.section ref={ref} id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
             <div className='flex items-center justify-center'>
                 <div className="relative">
                     <motion.div
@@ -63,6 +66,6 @@ export default function Intro() {
                 <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:text-gray-950 hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10' href="https://www.linkedin.com/in/varunpats/" target="_blank"><BsLinkedin /></a>
                 <a className='bg-white text-gray-700 p-4 text-[1.35rem] flex items-center gap-2 rounded-full focus:scale-[1.15] hover:text-gray-950 hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10' href="https://github.com/varunpats/" target="_blank"><FaGithubSquare /></a>
             </motion.div>
-        </section>
+        </motion.section>
     )
 }
