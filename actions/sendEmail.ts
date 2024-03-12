@@ -1,13 +1,16 @@
 "use server"
 
+import React from "react";
 import { Resend } from "resend";
-import { validateString } from "@/lib/utils";
+import { validateString, getErrorMessage } from "@/lib/utils";
+import ContactForm from "@/email/contact-form";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
     const email = formData.get("email");
     const message = formData.get("message");
+    let data;
 
     if (!validateString(email, 60)) {
         return {
@@ -22,22 +25,23 @@ export const sendEmail = async (formData: FormData) => {
     }
 
     try {
-        await resend.emails.send({
+        data = await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
             to: 'varunpatil2502@gmail.com',
             subject: 'Message from portfolio form.',
             reply_to: email as string,
-            text: message as string
+            react: React.createElement(ContactForm, {
+                message: message as string,
+                email: email as string
+            })
         });
     } catch (error: unknown) {
-        if (error instanceof Error) {
-            return {
-                error: error.message
-            }
-        } else if (error && typeof error === 'object' && 'message' in error) {
-            return {
-                error: error.message
-            }
+        return {
+            error: getErrorMessage(error)
         }
+    }
+
+    return {
+        data
     }
 }

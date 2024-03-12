@@ -1,10 +1,11 @@
 "use client"
 
 import { motion } from 'framer-motion';
+import toast from 'react-hot-toast';
 import SectionHeading from './section-heading'
-import { FaPaperPlane } from "react-icons/fa";
 import { useSectionInView } from '@/lib/hooks';
 import { sendEmail } from '@/actions/sendEmail';
+import SubmitBtn from './submit-btn';
 
 export default function Contact() {
     const ref = useSectionInView("Contact", 0.3);
@@ -36,13 +37,18 @@ export default function Contact() {
                 or through this form.
             </p>
             <form className='mt-10 flex flex-col' action={async (formData) => {
-                await sendEmail(formData)
+                const { data, error } = await sendEmail(formData);
+
+                if (error) {
+                    toast.error(error)
+                    return;
+                }
+
+                toast.success('Email sent successfully!')
             }}>
                 <input type='email' className='h-14 px-4 rounded-lg borderBlack' placeholder='Your email' name="email" maxLength={60} required />
                 <textarea className='h-52 my-3 p-4 rounded-lg borderBlack' placeholder='Your message' name="message" maxLength={2000} required />
-                <button type='submit' className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:bg-gray-950 hover:scale-110 active:scale-105'>
-                    Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1' />
-                </button>
+                <SubmitBtn />
             </form>
         </motion.section>
     )
