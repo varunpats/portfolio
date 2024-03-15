@@ -13,6 +13,8 @@ export default function ThemeSwitch() {
 
         if (localTheme) {
             setTheme(localTheme);
+            if (localTheme === 'dark')
+                document.documentElement.classList.add("dark");
         }
     }, [])
 
@@ -20,14 +22,16 @@ export default function ThemeSwitch() {
         if (theme === 'light') {
             setTheme('dark')
             window.localStorage.setItem('theme', 'dark')
+            document.documentElement.classList.add("dark");
         } else {
             setTheme('light')
             window.localStorage.setItem('theme', 'light')
+            document.documentElement.classList.remove("dark");
         }
     }
 
     return (
-        <button className='fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl flex items-center justify-center rounded-full hover:scale-[1.15] active:scale-105 transition-all' onClick={toggleTheme}>
+        <button className='fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl flex items-center justify-center rounded-full hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950' onClick={toggleTheme}>
             {
                 theme === 'light' ?
                     <BsSun /> :
