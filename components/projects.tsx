@@ -11,7 +11,7 @@ export default function Projects() {
     const ref = useSectionInView("Projects", 0.5);
 
     return (
-        <motion.section ref={ref} id="projects" className='scroll-mt-28 mb-28'>
+        <motion.section ref={ref} id="projects" className='px-4 scroll-mt-28 mb-28 sm:px-0'>
             <SectionHeading>My projects</SectionHeading>
             <div>
                 {projectsData.map((project, index) => (

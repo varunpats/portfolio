@@ -13,7 +13,7 @@ export default function Experience() {
     const { theme } = useTheme();
 
     return (
-        <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+        <section ref={ref} id="experience" className="px-4 scroll-mt-28 mb-28 sm:mb-40 sm:px-0">
             <SectionHeading>My experience</SectionHeading>
             <VerticalTimeline lineColor="">
                 {
