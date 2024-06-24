@@ -51,7 +51,7 @@ export const experiencesData = [
         date: "2019 - 2024",
     },
     {
-        title: "Full-Stack Developer",
+        title: "Front-end Developer",
         location: "Pune, MH",
         description:
             "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
