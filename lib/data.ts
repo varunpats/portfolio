@@ -36,27 +36,27 @@ export const links = [
 export const experiencesData = [
     {
         title: "Completed education",
-        location: "Pune, MH",
+        location: "Pune, India",
         description:
-            "Got a internship before completing post graduation. Later secured a job in the same organization as a Web Developer",
+            "Commenced my professional journey by securing intership. After couple of months employed in the same organization as a Web developer.",
         icon: React.createElement(LuGraduationCap),
         date: "2019",
     },
     {
         title: "Front-End Developer",
-        location: "Pune, MH",
+        location: "Pune, India",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "Absorbed new technologies and tools, worked on different projects and domains. Which assisted me in staying up to date with the latest trends and advancements in the field.",
         icon: React.createElement(CgWorkAlt),
         date: "2019 - 2024",
     },
     {
-        title: "Front-end Developer",
-        location: "Pune, MH",
+        title: "React Developer",
+        location: "Pune, India",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "At the moment, I'm performing a React Developer role for a Globant. My stack includes React, Next.js, TypeScript, Bootstrap and Node.js. I'm open to full-time opportunities.",
         icon: React.createElement(FaReact),
-        date: "2021 - present",
+        date: "2024 - Present",
     },
 ] as const;
 
@@ -85,16 +85,17 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-    "HTML",
-    "CSS",
+    "React",
+    "Angular",
+    "Next.js",
     "JavaScript",
     "TypeScript",
-    "React",
-    "ES6",
-    "Next.js",
-    "Node.js",
-    "Git",
     "Redux",
-    "Express",
-    "Framer Motion",
+    "ES6",
+    "HTML5",
+    "SCSS",
+    "Bootstrap",
+    "Figma",
+    "Git/Bitbucket",
+    "VS Code"
 ] as const;
