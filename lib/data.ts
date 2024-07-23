@@ -72,7 +72,7 @@ export const projectsData = [
         title: "Audiophile",
         description:
             "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Context API"],
+        tags: ["React", "Next", "TypeScript", "Context API"],
         imageUrl: rmtdevImg,
     },
     {
