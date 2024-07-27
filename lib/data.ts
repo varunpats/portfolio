@@ -54,7 +54,7 @@ export const experiencesData = [
         title: "React Developer",
         location: "Pune, India",
         description:
-            "At the moment, I'm performing a React Developer role for a Globant. My stack includes React, Next.js, TypeScript, Bootstrap and Node.js. I'm open to full-time opportunities.",
+            "At the moment, I'm performing a React Developer role for Globant. My stack includes React, Next.js, TypeScript, Bootstrap and Node.js. I'm open to full-time opportunities.",
         icon: React.createElement(FaReact),
         date: "2024 - Present",
     },
@@ -64,7 +64,7 @@ export const projectsData = [
     {
         title: "Netflix Clone",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+            "Replica of Netflix for desktop and responsive devices. Added Stripe payment integration for subscription.",
         tags: ["React", "Redux", "Axios", "Stripe", "Firebase"],
         imageUrl: corpcommentImg,
     },
