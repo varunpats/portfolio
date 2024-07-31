@@ -71,7 +71,7 @@ export const projectsData = [
     {
         title: "Audiophile",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+            "E-commerce website devloped using React & Next. Exploit Context API to maintain state of cart.",
         tags: ["React", "Next", "TypeScript", "Context API"],
         imageUrl: rmtdevImg,
     },
