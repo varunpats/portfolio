@@ -89,7 +89,6 @@ export const skillsData = [
     "Angular",
     "Next.js",
     "JavaScript",
-    "Node",
     "TypeScript",
     "Redux",
     "ES6",
